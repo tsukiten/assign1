@@ -41,3 +41,5 @@ void draw() {
   image(imgd,w,z); //enemy
   w+=3;
   w%=640;
+  
+}
