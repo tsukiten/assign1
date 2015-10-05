@@ -7,12 +7,12 @@ int x,y,w,z,m,q;
 void setup () {
   size(640,480) ;  // must use this size.
 
-  imgx =loadImage("bg2.png");
-  imgy =loadImage("bg1.png");
-  imga =loadImage("hp.png");
-  imgb =loadImage("fighter.png");
-  imgc =loadImage("treasure.png");
-  imgd =loadImage("enemy.png");
+  imgx =loadImage("img/bg2.png");
+  imgy =loadImage("img/bg1.png");
+  imga =loadImage("img/hp.png");
+  imgb =loadImage("img/fighter.png");
+  imgc =loadImage("img/treasure.png");
+  imgd =loadImage("img/enemy.png");
   
   x=floor(random(600)); //treasure
   y=floor(random(440));
@@ -40,6 +40,4 @@ void draw() {
   
   image(imgd,w,z); //enemy
   w+=3;
-  w%=600;
-  
-}
+  w%=640;
