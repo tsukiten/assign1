@@ -7,8 +7,8 @@ int x,y,w,z,m,q;
 void setup () {
   size(640,480) ;  // must use this size.
 
-  imgx =loadImage("img/bg2.png");
-  imgy =loadImage("img/bg1.png");
+  imgx =loadImage("img/bg1.png");
+  imgy =loadImage("img/bg2.png");
   imga =loadImage("img/hp.png");
   imgb =loadImage("img/fighter.png");
   imgc =loadImage("img/treasure.png");
@@ -24,11 +24,12 @@ void setup () {
 }
 
 void draw() {
-
-  image(imgx,q,0); //background
-  image(imgy,q-640,0);
+  
+  
+  image(imgx,q%1280-640,0); //background
+  image(imgy,(q+640)%1280-640,0);
   q++;
-  q%=620;
+  
   
   fill(230,0,0); //hp
   rect(28,27,m,23);
@@ -43,3 +44,4 @@ void draw() {
   w%=640;
   
 }
+ 
